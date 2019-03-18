@@ -1,0 +1,12 @@
+{
+  "name": "mint-range",
+  "description": "",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "author": "long.zhang@ele.me",
+  "homepage": "https://github.com/jiangtao/mint-ui",
+  "license": "MIT",
+  "repository": "https://github.com/jiangtao/mint-ui/tree/master/components/mint-range",
+  "dependencies": {
+  }
+}
