@@ -1,5 +1,5 @@
 <!--
-提交 issue 前请务必查看 FAQ：https://github.com/jiangtao/mint-ui/blob/master/FAQ.md。如果你的问题可以在 FAQ 中找到解决方案，我们会直接关闭 issue。
+提交 issue 前请务必查看 FAQ：https://github.com/hexyun/hexdo/blob/master/FAQ.md。如果你的问题可以在 FAQ 中找到解决方案，我们会直接关闭 issue。
  -->
 
 <!--

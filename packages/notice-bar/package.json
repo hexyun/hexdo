@@ -1,0 +1,31 @@
+{
+  "name": "notice-bar",
+  "version": "0.0.1",
+  "description": "vue vue-component notice-bar notice",
+  "keywords": [
+    "notice-bar",
+    "vue",
+    "vue-component"
+  ],
+  "author": "jt <321jiangtao@gmail.com>",
+  "homepage": "https://github.com/hexyun/hexdo/tree/master/packages/notice-bar#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexyun/hexdo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/hexyun/hexdo/issues"
+  }
+}

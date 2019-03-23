@@ -156,6 +156,11 @@
         "path": "/badge",
         "name": "Badge",
         "icon": "badge"
+      },
+      {
+        "path": "/noticeBar",
+        "name": "Notice",
+        "icon": "notice"
       }
     ]
   }

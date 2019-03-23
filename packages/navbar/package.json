@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "main": "lib/index.js",
   "author": "elemefe",
-  "homepage": "https://github.com/jiangtao/mint-ui",
+  "homepage": "https://github.com/hexyun/hexdo",
   "license": "MIT",
-  "repository": "https://github.com/jiangtao/mint-ui/tree/master/components/mint-navbar",
+  "repository": "https://github.com/hexyun/hexdo/tree/master/components/mint-navbar",
   "dependencies": {
   }
 }

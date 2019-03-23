@@ -28,11 +28,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hexyun/mint-ui.git"
+    "url": "git+https://github.com/hexyun/hexdo.git"
   },
-  "homepage": "https://github.com/hexyun/mint-ui#readme",
+  "homepage": "https://github.com/hexyun/hexdo#readme",
   "bugs": {
-    "url": "https://github.com/hexyun/mint-ui/issues"
+    "url": "https://github.com/hexyun/hexdo/issues"
   },
   "author": "hexyun",
   "license": "MIT",

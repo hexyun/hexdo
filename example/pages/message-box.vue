@@ -31,11 +31,16 @@
   export default {
     methods: {
       openAlert() {
-        MessageBox.alert('操作成功!', '提示');
+        MessageBox.alert('操作成功!', '提示').then(action => {
+          console.log(action)
+        })
       },
 
       openConfirm() {
-        MessageBox.confirm('确定执行此操作?', '提示');
+        MessageBox.confirm('确定执行此操作?', '选择').then(action => {
+          console.log(action)
+        });
+        
       },
 
       openPrompt() {

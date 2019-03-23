@@ -99,7 +99,7 @@ npm run dev
 ```
 
 ## Contribution
-Please make sure to read the [Contributing Guide](https://github.com/jiangtao/mint-ui/blob/1.x/.github/CONTRIBUTING.md) before making a pull request.
+Please make sure to read the [Contributing Guide](https://github.com/hexyun/hexdo/blob/1.x/.github/CONTRIBUTING.md) before making a pull request.
 
 ## License
 MIT
