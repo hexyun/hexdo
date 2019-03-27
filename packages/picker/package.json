@@ -15,5 +15,8 @@
   "dependencies": {
     "raf.js": "0.0.4",
     "wind-dom": "0.0.3"
+  },
+  "devDependencies": {
+    "cooking-autoprefixer": "^1.0.0"
   }
 }

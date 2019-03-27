@@ -17,6 +17,7 @@
   "author": "qingwei-li<cinwell.li@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "cooking-autoprefixer": "^1.0.0",
     "webpack-shell-plugin": "^0.4.2"
   }
 }

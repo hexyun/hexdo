@@ -10,8 +10,7 @@ cooking.set({
   format: 'umd',
   moduleName: 'MintNavbar',
   extractCSS: 'style.css',
-
-  extends: ['vue', 'saladcss']
+  extends: ['vue', 'saladcss', 'autoprefixer'],
 });
 
 cooking.add('resolve.alias', {

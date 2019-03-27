@@ -55,6 +55,7 @@
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-2": "^6.17.0",
     "cooking": "1.1.4",
+    "cooking-autoprefixer": "^1.0.0",
     "cooking-lint": "0.1.2",
     "cooking-saladcss": "0.4.0",
     "cooking-vue": "0.5.1",

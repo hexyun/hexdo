@@ -11,7 +11,7 @@ cooking.set({
   minimize: false,
   moduleName: 'MINT',
   extractCSS: 'style.css',
-  extends: ['vue', 'saladcss'],
+  extends: ['vue', 'saladcss', 'autoprefixer'],
   alias: config.alias,
   externals: config.externals
 });

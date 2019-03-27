@@ -9,7 +9,7 @@ cooking.set({
   format: 'umd',
   moduleName: 'MINT',
   extractCSS: 'style.min.css',
-  extends: ['vue', 'saladcss'],
+  extends: ['vue', 'saladcss', 'autoprefixer'],
   alias: config.alias,
   externals: { vue: config.externals.vue }
 });

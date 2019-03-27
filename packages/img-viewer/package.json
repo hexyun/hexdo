@@ -9,5 +9,8 @@
   "repository": "https://github.com/hexyun/hexdo/tree/master/components/mint-img-viewer",
   "dependencies": {
     "vue-swiper": "0.5.0"
+  },
+  "devDependencies": {
+    "cooking-autoprefixer": "^1.0.0"
   }
 }

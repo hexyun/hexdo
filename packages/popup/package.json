@@ -8,6 +8,7 @@
   "license": "MIT",
   "repository": "https://github.com/hexyun/hexdo/tree/master/components/mint-popup",
   "devDependencies": {
+    "cooking-autoprefixer": "^1.0.0",
     "vue-popup": "^0.1.12"
   }
 }
