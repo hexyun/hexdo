@@ -1,1 +1,1 @@
-# mint-navbar
+# mint-notice-bar

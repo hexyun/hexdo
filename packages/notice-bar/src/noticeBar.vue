@@ -1,7 +1,7 @@
 <template>
   <div class="mint-notice-bar">
       <div :class="parentClass" v-el:wrapper class="mint-notice__wrapper">
-          <div track-by="$index" :style="itemStyle" class="mint-notice__item" v-for="item in copyData">{{item}}</div>
+          <div track-by="$index" :style="itemStyle" class="mint-notice__item" v-for="item in copyData"><p>{{item}}</p></div>
       </div>
   </div>
 </template>
@@ -11,10 +11,6 @@
  * mt-notice-bar
  * @module components/notice-bar
  * @desc 滚动消息组件，处理滚动的文本等等
- *
- * @param {boolean} [fixed=false] - 固定底部
- * @param {*} selected - 返回 item component 传入的 value
- *
  * @example
  *
  */
@@ -68,7 +64,7 @@ export default {
     },
     start() {
       const el = this.$els.wrapper
-      const h = parseInt(window.getComputedStyle(el, null)['height'])
+      const h = parseInt(window.getComputedStyle(el.parentNode, null)['height'])
       this.itemStyle = {height: h}
       el.style.height = `${h * this.copyData.length}px`
       this.loop(this.duration, () => {

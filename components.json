@@ -31,5 +31,6 @@
   "datetime-picker": "./packages/datetime-picker/index.js",
   "index-list": "./packages/index-list/index.js",
   "index-section": "./packages/index-section/index.js",
-  "cell-swipe": "./packages/cell-swipe/index.js"
+  "cell-swipe": "./packages/cell-swipe/index.js",
+  "notice-bar": "./packages/notice-bar/index.js"
 }

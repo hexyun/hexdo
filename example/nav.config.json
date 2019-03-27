@@ -158,7 +158,7 @@
         "icon": "badge"
       },
       {
-        "path": "/noticeBar",
+        "path": "/notice-bar",
         "name": "Notice",
         "icon": "notice"
       }
