@@ -1,0 +1,13 @@
+{
+  "name": "mint-img-viewer",
+  "description": "",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "author": "jiangtao",
+  "homepage": "https://github.com/hexyun/hexdo",
+  "license": "MIT",
+  "repository": "https://github.com/hexyun/hexdo/tree/master/components/mint-img-viewer",
+  "dependencies": {
+    "vue-swiper": "0.5.0"
+  }
+}

@@ -2874,7 +2874,7 @@
     transition: transform .5s ease-in-out;
 }
 .notransition {
-    transition: none !important;
+    transition-property: none !important;
 }
 
 @font-face {font-family: "mintui";

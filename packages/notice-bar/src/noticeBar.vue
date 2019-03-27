@@ -111,6 +111,9 @@ export default {
     }
   }
   .notransition {
-      transition: none !important;
+      -webkit-transition-property: none !important;
+      -moz-transition-property: none !important;
+      -o-transition-property: none !important;
+      transition-property: none !important;
   }
 </style>
