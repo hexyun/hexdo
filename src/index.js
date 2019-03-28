@@ -31,6 +31,7 @@ import IndexList from '../packages/index-list/index.js';
 import IndexSection from '../packages/index-section/index.js';
 import CellSwipe from '../packages/cell-swipe/index.js';
 import NoticeBar from '../packages/notice-bar/index.js';
+import ImgViewer from '../packages/img-viewer/index.js';
 import '../src/assets/font/iconfont.css';
 
 const install = function(Vue) {
@@ -64,6 +65,7 @@ const install = function(Vue) {
   Vue.component(IndexSection.name, IndexSection);
   Vue.component(CellSwipe.name, CellSwipe);
   Vue.component(NoticeBar.name, NoticeBar);
+  Vue.component(ImgViewer.name, ImgViewer);
   Vue.use(InfiniteScroll);
   Vue.use(Lazyload, {
     loading: require('./assets/loading-spin.svg'),
@@ -115,5 +117,6 @@ module.exports = {
   IndexList,
   IndexSection,
   CellSwipe,
-  NoticeBar
+  NoticeBar,
+  ImgViewer
 };

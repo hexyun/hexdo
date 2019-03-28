@@ -161,6 +161,11 @@
         "path": "/notice-bar",
         "name": "Notice",
         "icon": "notice"
+      },
+      {
+        "path": "/img-viewer",
+        "name": "ImgViewer",
+        "icon": "badge"
       }
     ]
   }

@@ -10,7 +10,6 @@ cooking.set({
   format: 'umd',
   moduleName: 'MintImgViewer',
   extractCSS: 'style.css',
-
   extends: ['vue', 'saladcss']
 });
 
