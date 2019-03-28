@@ -1,6 +1,6 @@
 <template>
   <div class="mint-notice-bar">
-      <div :class="parentClass" v-el:wrapper class="mint-notice__wrapper">
+      <div v-el:wrapper class="mint-notice__wrapper" :class="parentClass">
           <div track-by="$index" :style="itemStyle" class="mint-notice__item" v-for="item in copyData"><p>{{item}}</p></div>
       </div>
   </div>
@@ -23,7 +23,7 @@ export default {
     },
     duration: {
       type: Number,
-      default: 1
+      default: 2
     },
     start: {
       type: Boolean,
@@ -42,12 +42,19 @@ export default {
       timer: null,
       i: -1,
       itemStyle: {},
-      parentClass: [],
+      parentClass: ['notransition'],
       _lock: false
     }
   },
   ready() {
     this.start()
+    document.addEventListener('visibilitychange', () => {
+      if(document.visibilityState === 'hidden') {
+        this.stop()
+      } else {
+        this.start()
+      }
+    })
   },
   watch: {
     start(val, old) {
@@ -60,7 +67,7 @@ export default {
     loop(duration = 1, cb) {
       if(!this.start) return
       if(typeof cb === 'function') cb()
-      this.timer = setTimeout(this.loop, this._lock ? 0 : duration * 1000, duration, cb)
+      this.timer = setTimeout(this.loop, this._lock ? 1000 / 16 : duration * 1000, duration, cb)
     },
     start() {
       const el = this.$els.wrapper
@@ -74,11 +81,10 @@ export default {
           this._lock = true
           this.parentClass.push('notransition')
         } else {
-          this.parentClass = []
+          this.parentClass.pop()
           this._lock = false
         }
         el.style.transform = `translateY(${-1 * h * this.i}px)`
-
       })
     },
     stop() {
@@ -104,16 +110,21 @@ export default {
         overflow: hidden;
         display: flex;
         text-align: center;
+        position: relative;
         & .mint-notice__wrapper{
+            position: absolute;
+            left:0;
+            max-height: 0;
             height: 100%;
-            transition: transform .5s ease-in-out;
+            transition: all .5s ease-in-out;
+            transform: translateZ(0);
         }
     }
-  }
-  .notransition {
-      -webkit-transition-property: none !important;
-      -moz-transition-property: none !important;
-      -o-transition-property: none !important;
-      transition-property: none !important;
+      .notransition{
+          -webkit-transition-property: none !important;
+          -moz-transition-property: none !important;
+          -o-transition-property: none !important;
+          transition-property: none !important;
+      }
   }
 </style>
