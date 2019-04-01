@@ -1,19 +1,24 @@
 <template>
 
-    <div v-show="show" class="mt-img__text">{{ i }}/{{list.length}}</div>
-    <mt-popup :visible.sync="show" popup-transition="popup-fade" class="mt-img-viewer">
-        <swiper class="mt-img-swiper" v-ref:swiper
-                :direction="direct"
-                :mousewheel-control="true"
-                :performance-mode="false"
-                :pagination-visible="false"
-                :pagination-clickable="false"
-                :loop="false"
-                @slide-change-start="onSlideChangeStart"
-                @slide-change-end="onSlideChangeEnd">
-            <div class="mt-img__item" track-by="$index" v-for="item in list"><img :src="key ? item[key] : item" alt=""></div>
-        </swiper>
-    </mt-popup>
+    <div>
+        <div v-show="visible" class="mt-img__text">{{ i }}/{{list.length}}</div>
+        <mt-popup :visible.sync="visible" popup-transition="popup-fade" class="mt-img-viewer">
+            <swiper class="mt-img-swiper" v-ref:swiper
+                    :direction="direct"
+                    :mousewheel-control="false"
+                    :performance-mode="false"
+                    :pagination-visible="false"
+                    :pagination-clickable="false"
+                    :loop="false"
+                    @slide-change-start="onSlideChangeStart"
+                    @slide-revert-start="onRevertStart"
+                    @slide-revert-end="onRevertEnd"
+                    @slider-move="onMove"
+                    @slide-change-end="onSlideChangeEnd">
+                <div class="mt-img__item" track-by="$index" v-for="item in list"><img :src="key ? item[key] : item" alt=""></div>
+            </swiper>
+        </mt-popup>
+    </div>
 
 </template>
 
@@ -43,9 +48,9 @@ export default {
       type: String,
       default: ''
     },
-    index: {
+    page: {
       type: [Number, String],
-      default: 0
+      default: 1
     },
     show: {
       type: Boolean,
@@ -64,18 +69,40 @@ export default {
     }
   },
   data() {
-    return {i: this.index}
+    return {i: Math.min(Math.max(this.page, 1), this.list.length), visible: this.show, _lock: false, _moving: false}
+  },
+  ready(){
+    this.setPage(this.i)
+    this._lock = true
   },
   watch: {
-    index(val, old) {
-      if(val != old) this.$refs.swiper.setPage(val)
+    page(val, old) {
+      if(val !== old) this.setPage(val)
+    },
+    show(val, old) {
+      if(val !== old) this.visible = val
     }
   },
   methods: {
+    setPage(v){
+      this.$refs.swiper.setPage(Math.min(Math.max(v, 1), this.list.length), false)
+    },
+    onMove(e,mm) {
+      this._moving = true
+    },
+    onRevertStart(p){
+      if(this._lock && !this._moving) {
+        this.visible = false
+      }
+    },
+    onRevertEnd(p){
+      this._moving = false
+    },
     onSlideChangeStart(p){
       this.$emit('start', p)
     },
     onSlideChangeEnd(p){
+      this._moving = false
       this.i = p
       this.$emit('end', p)
     },
