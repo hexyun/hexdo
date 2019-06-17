@@ -2929,6 +2929,7 @@
 }
 .mt-img__item img{
     width: 100%;
+    display: block;
 }
 .swiper .swiper-wrap{
     -ms-flex-align: center;

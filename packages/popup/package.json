@@ -10,5 +10,6 @@
   "devDependencies": {
     "cooking-autoprefixer": "^1.0.0",
     "vue-popup": "^0.1.12"
-  }
+  },
+  "gitHead": "d495f699d2da468eb71bf658e7b822182ad03310"
 }
