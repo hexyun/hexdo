@@ -1,8 +1,7 @@
 <template>
-
     <div>
         <div v-show="visible" class="mt-img__text">{{ i }}/{{list.length}}</div>
-        <mt-popup :visible.sync="visible" popup-transition="popup-fade" class="mt-img-viewer">
+        <mt-popup :visible="visible || lock" popup-transition="popup-fade" class="mt-img-viewer">
             <swiper class="mt-img-swiper" v-ref:swiper
                     :direction="direct"
                     :mousewheel-control="false"
@@ -15,7 +14,7 @@
                     @slide-revert-end="onRevertEnd"
                     @slider-move="onMove"
                     @slide-change-end="onSlideChangeEnd">
-                <div class="mt-img__item" track-by="$index" v-for="item in list"><img :src="key ? item[key] : item" alt=""></div>
+                <div @mousedown.prevent="select(item, index, list)" class="mt-img__item" track-by="$index" v-for="( index, item) in list"><img :src="key ? item[key] : item" alt=""></div>
             </swiper>
         </mt-popup>
     </div>
@@ -55,6 +54,16 @@ export default {
     show: {
       type: Boolean,
       default: true
+    },
+    lock: {
+      type: Boolean,
+      default: false
+    },
+    selectItem: {
+      type: Function,
+      default: function d() {
+        return function() {}
+      }
     }
   },
   components: {
@@ -80,7 +89,7 @@ export default {
       if(val !== old) this.setPage(val)
     },
     show(val, old) {
-      if(val !== old) this.visible = val
+      if(val !== old && !this.lock) this.visible = val
     }
   },
   methods: {
@@ -106,6 +115,9 @@ export default {
       this.i = p
       this.$emit('end', p)
     },
+    select(item, index, list) {
+      this.selectItem(item, index, list)
+    }
   },
   beforeDestroy() {
   }
@@ -131,6 +143,7 @@ export default {
   }
   .mt-img__item img{
       width: 100%;
+      display: block;
   }
   .swiper .swiper-wrap{
       align-items: center;
