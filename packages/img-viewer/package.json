@@ -1,6 +1,6 @@
 {
   "name": "hex-img-viewer",
-  "description": "",
+  "description": "hex img viewer",
   "version": "0.0.3",
   "main": "lib/index.js",
   "author": "jiangtao",
@@ -13,5 +13,5 @@
   "devDependencies": {
     "cooking-autoprefixer": "^1.0.0"
   },
-  "gitHead": "d495f699d2da468eb71bf658e7b822182ad03310"
+  "gitHead": "8f4eb7eacf99e7231e1b62615333c3f1795d0f80"
 }
