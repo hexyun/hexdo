@@ -1,7 +1,7 @@
 {
   "name": "hex-img-viewer",
   "description": "",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "author": "jiangtao",
   "homepage": "https://github.com/hexyun/hexdo",
