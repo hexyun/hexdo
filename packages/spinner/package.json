@@ -1,5 +1,5 @@
 {
-  "name": "mint-spinner",
+  "name": "hex-spinner",
   "version": "0.2.2",
   "description": "A spinner component for vue.js",
   "main": "lib/index.js",
