@@ -1,6 +1,8 @@
 <template>
   <div class="page-picker">
     <h1 class="page-title">Picker</h1>
+
+  <div class="page-picker-wrapper">
     <div class="page-picker-wrapper">
       <mt-picker :slots="yearSlot" @change="onYearChange" :visible-item-count="3"></mt-picker>
     </div>

@@ -1,7 +1,7 @@
 {
   "name": "hex-notice-bar",
   "description": "",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "lib/index.js",
   "author": "jiangtao",
   "homepage": "https://github.com/hexyun/hexdo",
@@ -10,5 +10,5 @@
   "devDependencies": {
     "cooking-autoprefixer": "^1.0.0"
   },
-  "gitHead": "8f4eb7eacf99e7231e1b62615333c3f1795d0f80"
+  "gitHead": "c2e575f8ab098e897105797114e23e6945f23983"
 }

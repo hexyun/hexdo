@@ -1,0 +1,31 @@
+{
+  "name": "select-picker",
+  "version": "0.1.1",
+  "description": "select picker",
+  "keywords": [
+    "picker",
+    "select"
+  ],
+  "author": "jt <321jiangtao@gmail.com>",
+  "homepage": "https://github.com/hexyun/hexdo/tree/master/packages/select-picker#readme",
+  "license": "MIT",
+  "main": "lib/select-picker.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexyun/hexdo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/hexyun/hexdo/issues"
+  },
+  "gitHead": "c2e575f8ab098e897105797114e23e6945f23983"
+}
