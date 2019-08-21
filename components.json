@@ -33,5 +33,6 @@
   "index-section": "./packages/index-section/index.js",
   "cell-swipe": "./packages/cell-swipe/index.js",
   "notice-bar": "./packages/notice-bar/index.js",
-  "img-viewer": "./packages/img-viewer/index.js"
+  "img-viewer": "./packages/img-viewer/index.js",
+  "select-picker": "./packages/select-picker/index.js"
 }

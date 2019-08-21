@@ -1,1 +1,1 @@
-module.exports = require('./src/datetime-picker.vue');
+module.exports = require('./src/select-picker.vue');
