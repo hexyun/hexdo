@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-show="visible" class="mt-img__text">{{ i }}/{{list.length}}</div>
-        <mt-popup :visible="visible || lock" popup-transition="popup-fade" class="mt-img-viewer">
+        <mt-popup :visible.sync="visible" popup-transition="popup-fade" class="mt-img-viewer">
             <swiper class="mt-img-swiper" v-ref:swiper
                     :direction="direct"
                     :mousewheel-control="false"
@@ -89,12 +89,22 @@ export default {
       if(val !== old) this.setPage(val)
     },
     show(val, old) {
-      if(val !== old && !this.lock) this.visible = val
+      if(!this.lock) this.visible = val
+    },
+    list(val, old) {
+        
+        this.i = 1
+        this.setPage(1)
     }
   },
   methods: {
+    showImage(flag) {
+      if(this._lock && !this._moving) 
+        this.visible = Boolean(flag)
+    },
     setPage(v){
       this.$refs.swiper.setPage(Math.min(Math.max(v, 1), this.list.length), false)
+      this._lock = true
     },
     onMove(e,mm) {
       this._moving = true
@@ -112,6 +122,8 @@ export default {
     },
     onSlideChangeEnd(p){
       this._moving = false
+      p = Math.min(this.list.length, p)
+      p = Math.max(p, 1)
       this.i = p
       this.$emit('end', p)
     },

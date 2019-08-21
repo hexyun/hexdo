@@ -123,11 +123,16 @@
         this.popupTransition = `popup-slide-${ this.position }`;
       }
     },
-
-    ready() {
-      if (this.visible) {
-        this.rendered = true;
-        this.open();
+    watch: {
+      visible(v) {
+        console.log('visible', v)
+        if(v) {
+          this.rendered = true;
+          this.open();
+        } else {
+          this.rendered = false;
+          this.doClose();
+        }
       }
     }
   };
