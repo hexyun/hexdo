@@ -171,6 +171,11 @@
         "path": "/img-viewer",
         "name": "ImgViewer",
         "icon": "badge"
+      },
+      {
+        "path": "/menu",
+        "name": "menu",
+        "icon": ""
       }
     ]
   }

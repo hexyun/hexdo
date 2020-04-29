@@ -1,6 +1,6 @@
-var cooking = require('cooking');
-var webpack = require('webpack');
-var config = require('./config');
+var cooking = require('cooking')
+var webpack = require('webpack')
+var config = require('./config')
 
 cooking.set({
   entry: './src/index.js',
@@ -14,13 +14,16 @@ cooking.set({
   extends: ['vue', 'saladcss'],
   alias: config.alias,
   externals: config.externals
-});
+})
 
-cooking.remove('output.publicPath');
-cooking.add('output.filename', 'mint-ui.common.js');
-cooking.add('loader.js.exclude', config.jsexclude);
-cooking.add('plugins.Define', new webpack.DefinePlugin({
-  'process.env.NODE_ENV': JSON.stringify('component')
-}));
+cooking.remove('output.publicPath')
+cooking.add('output.filename', 'mint-ui.common.js')
+cooking.add('loader.js.exclude', config.jsexclude)
+cooking.add(
+  'plugins.Define',
+  new webpack.DefinePlugin({
+    'process.env.NODE_ENV': JSON.stringify('component')
+  })
+)
 
-module.exports = cooking.resolve();
+module.exports = cooking.resolve()
