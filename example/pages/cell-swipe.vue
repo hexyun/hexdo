@@ -2,27 +2,39 @@
   <div class="page-cell">
     <div class="page-title">Cell Swipe</div>
     <mt-cell-swipe
-      v-for="n in 10"
-      :right="rightButtons"
-      title="swipe me">
+      v-for="n in list"
+      :value="n"
+      :right="rightButtons">
+      <div class="hi">
+      hello world
+      </div>
     </mt-cell-swipe>
   </div>
 </template>
-
+<style>
+.hi{
+  height: 80px;
+}
+</style>
 <script>
   export default {
+    data () {
+      return {
+        list: [],
+        rightButtons: []
+      }
+    },
     created() {
       this.rightButtons = [
         {
-          content: 'Mark as Unread',
-          style: { background: 'lightgray', color: '#fff' }
-        },
-        {
-          content: 'Delete',
+          content: '删除',
           style: { background: 'red', color: '#fff' },
-          handler: () => this.$messagebox('delete')
+          handler: (x) => console.log(x)
         }
       ];
+    },
+    ready () {
+      setTimeout(_ => this.list = [1,2,5,10,30], 100)
     },
 
     methods: {

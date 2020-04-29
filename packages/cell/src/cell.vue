@@ -133,7 +133,6 @@ export default {
       }
 
       @descendent title {
-        flex: 1;
       }
 
       @descendent value {

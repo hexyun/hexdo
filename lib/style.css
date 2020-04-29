@@ -465,12 +465,7 @@
     margin-top: 6px;
 }
 
-.mint-cell-title {
-
-    -ms-flex: 1;
-
-        flex: 1;
-}
+.mint-cell-title {}
 
 .mint-cell-value {
 
@@ -2840,15 +2835,22 @@
     height: 100%;
 }
 
-.mint-cell-swipe-button {
+.mint-cell-swipe-button-wrapper {
 
     height: 100%;
 
-    display: inline-block;
+    display: -ms-flexbox;
 
-    padding: 0 10px;
+    display: flex;
 
-    line-height: 48px;
+    -ms-flex-align: center;
+
+        align-items: center;
+}
+
+.mint-cell-swipe-button {
+
+    padding: 0 19px;
 }
 /* Cell Component */
 
